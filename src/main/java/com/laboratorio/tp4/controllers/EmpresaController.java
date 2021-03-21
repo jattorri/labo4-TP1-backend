@@ -1,5 +1,6 @@
 package com.laboratorio.tp4.controllers;
 
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,6 +20,7 @@ import com.laboratorio.tp4.services.EmpresaService;
 @CrossOrigin(origins="*")
 @RequestMapping(path="api/empresas")
 public class EmpresaController {
+	
 	
 	private EmpresaService empresaService;
 	

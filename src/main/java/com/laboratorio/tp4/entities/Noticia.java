@@ -18,17 +18,25 @@ public class Noticia {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;   
 	
+	@Column(name="titulo")
 	private String títuloDeLaNoticia;  
+	
+	@Column(name="resumen")
 	private String resumenDeLaNoticia; 
+	
+	@Column(name="imagen")
 	private String imagenNoticia;    
+	
+	@Column(name="contenido_html")
 	private String contenidoHTML;   
+	
+	@Column(name="publicada")
 	private char publicada;
 	
 	@Column(name="fecha_publicacion")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaPublicación;  
 
-	private Empresa empresa;
 
 	public Long getId() {
 		return Id;
@@ -86,12 +94,6 @@ public class Noticia {
 		this.fechaPublicación = fechaPublicación;
 	}
 
-	public Empresa getEmpresa() {
-		return empresa;
-	}
 
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
-	}
 	
 }

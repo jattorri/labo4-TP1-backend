@@ -1,5 +1,6 @@
 package com.laboratorio.tp4.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,13 +15,28 @@ public class Empresa {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
 
-private String denominación;   
-private String teléfono; 
-private String horarioDeAtención;  
-private String quienesSomos;   
-private Double latitud;    
-private Double longitud;    
-private String domicilio;     
+@Column(name="denominacion")
+private String denominación;
+
+@Column(name="telefono")
+private String teléfono;
+
+@Column(name="horario_atencion")
+private String horarioDeAtención; 
+
+@Column(name="quienes_somos")
+private String quienesSomos;
+
+@Column(name="latitud")
+private Double latitud;
+
+@Column(name="longitud")
+private Double longitud;  
+
+@Column(name="domicilio")
+private String domicilio;    
+
+@Column(name="email")
 private String email;
 
 public Long getId() {
