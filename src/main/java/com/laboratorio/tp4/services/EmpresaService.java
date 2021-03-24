@@ -27,7 +27,6 @@ public class EmpresaService implements BaseService<Empresa>{
 		}catch( Exception e){
 			throw new Exception(e.getMessage());
 		}
-		
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class EmpresaController {
 	
 	private EmpresaService empresaService;
 	
-	public EmpresaController(EmpresaService emrpesaService){
+	public EmpresaController(EmpresaService empresaService){
 		this.empresaService = empresaService;
 	}
 	

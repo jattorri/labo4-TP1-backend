@@ -16,13 +16,13 @@ public class Empresa {
 private Long id;
 
 @Column(name="denominacion")
-private String denominación;
+private String denominacion;
 
 @Column(name="telefono")
-private String teléfono;
+private String telefono;
 
 @Column(name="horario_atencion")
-private String horarioDeAtención; 
+private String horarioDeAtencion; 
 
 @Column(name="quienes_somos")
 private String quienesSomos;
@@ -45,23 +45,23 @@ public Long getId() {
 public void setId(Long id) {
 	this.id = id;
 }
-public String getDenominación() {
-	return denominación;
+public String getDenominacion() {
+	return denominacion;
 }
-public void setDenominación(String denominación) {
-	this.denominación = denominación;
+public void setDenominación(String denominacion) {
+	this.denominacion = denominacion;
 }
-public String getTeléfono() {
-	return teléfono;
+public String getTelefono() {
+	return telefono;
 }
-public void setTeléfono(String teléfono) {
-	this.teléfono = teléfono;
+public void setTeléfono(String telefono) {
+	this.telefono = telefono;
 }
-public String getHorarioDeAtención() {
-	return horarioDeAtención;
+public String getHorarioDeAtencion() {
+	return horarioDeAtencion;
 }
-public void setHorarioDeAtención(String horarioDeAtención) {
-	this.horarioDeAtención = horarioDeAtención;
+public void setHorarioDeAtención(String horarioDeAtencion) {
+	this.horarioDeAtencion = horarioDeAtencion;
 }
 public String getQuienesSomos() {
 	return quienesSomos;
