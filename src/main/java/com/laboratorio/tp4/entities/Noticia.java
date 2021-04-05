@@ -2,6 +2,8 @@ package com.laboratorio.tp4.entities;
 
 import java.util.Date;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +21,7 @@ public class Noticia {
 	private Long Id;   
 	
 	@Column(name="titulo")
-	private String títuloDeLaNoticia;  
+	private String tituloDeLaNoticia;  
 	
 	@Column(name="resumen")
 	private String resumenDeLaNoticia; 
@@ -36,7 +38,19 @@ public class Noticia {
 	@Column(name="fecha_publicacion")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaPublicación;  
+	
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "fk_empresa")
+	public Empresa empresa;
 
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
 
 	public Long getId() {
 		return Id;
@@ -46,12 +60,12 @@ public class Noticia {
 		Id = id;
 	}
 
-	public String getTítuloDeLaNoticia() {
-		return títuloDeLaNoticia;
+	public String getTituloDeLaNoticia() {
+		return tituloDeLaNoticia;
 	}
 
-	public void setTítuloDeLaNoticia(String títuloDeLaNoticia) {
-		this.títuloDeLaNoticia = títuloDeLaNoticia;
+	public void setTituloDeLaNoticia(String tituloDeLaNoticia) {
+		this.tituloDeLaNoticia = tituloDeLaNoticia;
 	}
 
 	public String getResumenDeLaNoticia() {
